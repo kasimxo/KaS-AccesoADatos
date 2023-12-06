@@ -1,0 +1,3 @@
+Esto es un archivo de ejemplo.
+Hemos hecho un salto de línea.
+Este es el final del archivo.
