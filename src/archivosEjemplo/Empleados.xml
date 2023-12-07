@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<empleados>
+	<empleado id="1">
+		<nombre>Juan</nombre>
+		<apellidos>Perez Lopez</apellidos>
+		<edad>25</edad>
+		<sueldo>2500</sueldo>
+	</empleado>
+	<empleado id="2">
+		<nombre>Elena</nombre>
+		<apellidos>Sanchez Gonzalez</apellidos>
+		<edad>32</edad>
+		<sueldo>2600</sueldo>
+	</empleado>
+</empleados>
