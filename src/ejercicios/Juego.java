@@ -24,6 +24,8 @@ public class Juego {
 	static Partida partida;
 	
 	public static void main(String[] args) {
+		// Recuperamos la partida guardada en el archivo de guardado
+		// Si esa partida tiene 0 vidas, crearemos una partida nueva
 		partida = recuperarPartida();
 		
 		while(partida.getVidas()>0) {
@@ -37,6 +39,7 @@ public class Juego {
 
 	}
 	
+	// Recuperamos la partida guardada
 	public static Partida recuperarPartida() {
 		File f = new File("./src/archivosEjemplo/partidaGuardada");
 		try {
@@ -55,6 +58,7 @@ public class Juego {
 		return iniciarPartida();
 	}
 	
+	// Guardamos el resultado de la partida en el archivo historial
 	public static void historial(boolean ganado) {
 		File f = new File("./src/archivosEjemplo/historialPartidas.txt");
 		if(ganado) {
@@ -80,6 +84,7 @@ public class Juego {
 		}
 	}
 	
+	// Guardamos la partida
 	public static void guardarPartida() {
 		File f = new File("./src/archivosEjemplo/partidaGuardada");
 		
@@ -96,6 +101,7 @@ public class Juego {
 
 	}
 	
+	// Comprobamos si el usuario ha ganado la partida
 	public static void finPartida() {
 		boolean terminado = true;
 		for(boolean b : partida.getAcertadas()) { 
@@ -112,6 +118,7 @@ public class Juego {
 		
 	}
 	
+	// Creamos una nueva partida
 	public static Partida iniciarPartida()  {
 		File f = new File("./src/archivosEjemplo/diccionario.txt");
 		Path p = Paths.get(f.getAbsolutePath());
@@ -126,6 +133,7 @@ public class Juego {
 		}
 	}
 	
+	// Leemos el input del usuario con una pequeña validación por si introduce varias letras o un caracter no válido
 	public static char leerLetra() {
 		System.out.println("Introduce una letra: ");
 		Scanner sc = new Scanner(System.in);
@@ -143,6 +151,7 @@ public class Juego {
 		return letra;
 	}
 	
+	// Hacemos la comprobación de si el caracter es una letra válida
 	public static boolean inputValido(char letra) {
 		String abc = "abcdefghijklmnñopqrstuvwxyz";
 		for(int i = 0; i<abc.length(); i++) {
