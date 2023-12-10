@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><empleados>
+<?xml version="1.0"?>
+<empleados>
 	<empleado id="1">
 		<nombre>Juan</nombre>
 		<apellidos>Perez Lopez</apellidos>
@@ -11,4 +12,4 @@
 		<edad>32</edad>
 		<sueldo>2600</sueldo>
 	</empleado>
-<empleado id="5"><nombre>Juan</nombre><apellidos>Martinez Gomez</apellidos><edad>68</edad><sueldo>2460</sueldo></empleado></empleados>
+</empleados>

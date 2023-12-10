@@ -26,24 +26,25 @@ public class LecturaEmpleadoXml {
 			
 			System.out.println("Listado de empleados:\n"); // Mostaramos un mensaje de cabecera
 
-			NodeList list = doc.getElementsByTagName("empleado");
+			NodeList nl = doc.getElementsByTagName("empleado"); // Recuperamos todos los elementos xml con nombre empleado
 
-			for (int temp = 0; temp < list.getLength(); temp++) {
+			for (int i = 0; i < nl.getLength(); i++) { // Recorremos todos los nodos recuperados con nomrbe empleado
 
-				Node node = list.item(temp);
+				Node node = nl.item(i); // Creamos una variable para el elemento que estamos recorriendo en este momento
 
-				if (node.getNodeType() == Node.ELEMENT_NODE) {
+				if (node.getNodeType() == Node.ELEMENT_NODE) { // Comprobamos que el elemento en cuestión es un elemento y no un comentario
 
-					Element element = (Element) node;
+					Element element = (Element) node; // Como hemos comprobado que se trata de un elemento, creamos una variable del tipo elemento
 
-					String id = element.getAttribute("id");
+					String id = element.getAttribute("id"); // Recuperamos el valor del atributo id del elemento recuperado
 
-					String nombre = element.getElementsByTagName("nombre").item(0).getTextContent();
-					String apellidos = element.getElementsByTagName("apellidos").item(0).getTextContent();
-					String edad = element.getElementsByTagName("edad").item(0).getTextContent();
-					String sueldo = element.getElementsByTagName("sueldo").item(0).getTextContent();
+					String nombre = element.getElementsByTagName("nombre").item(0).getTextContent(); // Recuperamos el valor del elemento nombre 
+					String apellidos = element.getElementsByTagName("apellidos").item(0).getTextContent(); // Recuperamos el valor del eleme
+					String edad = element.getElementsByTagName("edad").item(0).getTextContent(); // Recuperamos el valor del elemento edad
+					String sueldo = element.getElementsByTagName("sueldo").item(0).getTextContent(); // Recuperamos el valor del elemetno sueldo
 
-					System.out.println("Id de empleado: " + id);
+					// A continuación mostramos toda la información recuperada del elemento empleado
+					System.out.println("Id de empleado: " + id); 
 					System.out.println("Nombre completo: " + nombre + " " + apellidos);
 					System.out.println("Edad: " + edad);
 					System.out.println("Sueldo: " + sueldo);
@@ -52,7 +53,7 @@ public class LecturaEmpleadoXml {
 			}
 
 		} catch (Exception e) {
-			e.printStackTrace();
+			e.printStackTrace(); // Si ocurre un error, lo mostramos por pantalla
 		}
 
 	}
