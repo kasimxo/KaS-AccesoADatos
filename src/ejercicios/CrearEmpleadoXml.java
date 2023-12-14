@@ -74,6 +74,8 @@ public class CrearEmpleadoXml {
 	        	FileOutputStream output = new FileOutputStream(f); // Creamos el flujo de datos que utilizaremos para escribir en el documento
 	        	
 	            writeXml(doc, output); // Escribimos toda la información en el documento
+	            
+	            output.close();
 	        } catch (Exception e) {
 	            e.printStackTrace(); // Si sucede un error, lo mostramos por pantalla
 	        }

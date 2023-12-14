@@ -51,6 +51,8 @@ public class LecturaEmpleadoXml {
 					System.out.println();
 				}
 			}
+			
+		
 
 		} catch (Exception e) {
 			e.printStackTrace(); // Si ocurre un error, lo mostramos por pantalla
